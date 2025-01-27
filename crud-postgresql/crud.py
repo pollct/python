@@ -26,7 +26,7 @@ class Connection:
         try:
             self.cursor.close()
             self.conn.close()
-            print(f"DB success disconnect")
+            print("DB success disconnect")
         except Exception as e:
             print(f"DB error disconnect: {e}")
             
@@ -43,7 +43,7 @@ class Crud(Connection):
             self.connect()
             self.cursor.execute(sql, params)
             self.conn.commit()
-            print(f"DB success create")
+            print("DB success create")
             self.disconnect()
             
         except Exception as e:
